@@ -58,19 +58,30 @@ function getMemberPass($ID){
     $resultSet = $statement->fetchAll(PDO::FETCH_ASSOC);
     return stringit($resultSet);
 }
+function compareUsers($user){
+    $statement = getConnection()->prepare("SELECT Member_User FROM members WHERE Member_User = '" . $user . "'");
+    $statement->execute();
+    $resultSet = $statement->fetchAll(PDO::FETCH_ASSOC);
+    return stringit($resultSet);
+}
+
 //senders
 
 
 //useful
 function stringit($in)
 {
+    $send = "";
     if ($in != null) {
-        $send = "";
-            foreach ($in as $row) {
-                foreach ($row as $cell) {
-                    $send = $cell;
-                }
+        foreach ($in as $row) {
+            foreach ($row as $cell) {
+                $send = $cell;
             }
         }
+    }
+    if ($send == "") {
+        return "";
+    } else {
         return $send;
+    }
 }

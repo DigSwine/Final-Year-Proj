@@ -16,10 +16,10 @@
             <a href='Profile.php' class='w3-bar-item w3-button w3-padding-large w3-hover-black'>
                 <h2>ABOUT</h2>
             </a>
-            <a href='#photos' class='w3-bar-item w3-button w3-padding-large w3-hover-black'>
+            <a href='Virus.php' class='w3-bar-item w3-button w3-padding-large w3-hover-black'>
                 <h2>VIRUS</h2>
             </a>
-            <a href='#contact' class='w3-bar-item w3-button w3-padding-large w3-hover-black'>
+            <a href='Game.php' class='w3-bar-item w3-button w3-padding-large w3-hover-black'>
                 <h2>GAME</h2>
             </a>";
         }
