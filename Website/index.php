@@ -1,5 +1,6 @@
 <?php
 session_start();
+session_destroy();
 $_SESSION["loggedin"] = "false";
 include "Addons/Navbar.php";
 include_once "Addons/Sytlesheet.php";

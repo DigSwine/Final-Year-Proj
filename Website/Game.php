@@ -10,7 +10,7 @@ include_once "Addons/Header.php";
 <body>
 <!-- Page Content -->
 <div id="main">
-    <div class="w3-padding-16 w3-content w3-text-grey" id="gamearea" style="background-color: papayawhip;">
+    <div class="w3-padding-16 w3-content w3-text-grey" id="gamearea" style="background-color: papayawhip; height: 425px">
 
 
     </div>

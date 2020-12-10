@@ -5,7 +5,7 @@ const Pass = 'BbfP602+';
 const DataBase = 'comp3000_MWilsonSlider';
 
 
-//dont touch
+//Database connection - dont touch
 function getConnection()
 {
     $dataSourceName = 'mysql:dbname='.DataBase.';host='.SeverHTML;
@@ -25,8 +25,6 @@ function getConnection()
 function getAllDetails(){
     $_SESSION["Member_Email"] = getMemberEmail($_SESSION["Member_ID"]);
     $_SESSION["Member_Name"] = getMemberName($_SESSION["Member_ID"]);
-    $_SESSION["Member_User"] = getMemberUser($_SESSION["Member_ID"]);
-    $_SESSION["Member_Pass"] = getMemberPass($_SESSION["Member_ID"]);
 }
 function getMemberID($user, $unenpass){
     $statement = getConnection()->prepare("SELECT Member_ID FROM members WHERE Member_Username = '" . $user . "' AND Member_Pass = '" . $unenpass . "'");
@@ -66,8 +64,14 @@ function compareUsers($user){
 }
 
 //senders
-
-
+function addNewUser($name, $email, $user, $pass){
+    $statement = getConnection()->prepare("INSERT INTO `members` (`Member_ID`, `Member_Name`, `Member_Email`, `Member_Username`, `Member_Pass`) VALUES (NULL, '" . $name . "', '" . $email . "', '" . $user . "', '" . $pass . "');");
+    $statement->execute();
+}
+function editUserDetails($name, $email, $user, $pass, $id){
+    $statement = getConnection()->prepare("UPDATE `members` SET `Member_Name` = '" . $name . "', `Member_Email` = '" . $email . "', `Member_Username` = '". $user . "',`Member_Pass` = '" . $pass . "' WHERE 'Member_ID' = '". $id . "';");
+    $statement->execute();
+}
 //useful
 function stringit($in)
 {

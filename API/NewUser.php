@@ -13,12 +13,19 @@ if (isset($_POST["values"])) {
     $pass = $data->Password;
     $conpass = $data->ConPass;
 
-    $username = compareUsers($user);
-    echo $username;
-    if($username == null){
-       # addNewUser();
-        echo "sentdata";
+    if($user == $conuser) {
+        $username = compareUsers($user);
+        if ($pass == $conpass) {
+            if ($username == null) {
+                addNewUser($name, $email, $user, $pass);
+                echo "sentdata";
+            } else {
+                echo "exists";
+            }
+        } else {
+            echo "pas";
+        }
     } else {
-        echo "exists";
+        echo "use";
     }
 }

@@ -6,14 +6,12 @@ if (isset($_POST["values"])) {
     $data = json_decode($_POST["values"]);
 
     # //pull apart the variables and sort them into local variables
-    $_SESSION['Member_User'] = $data->User;
-    $_SESSION['Member_Pass'] = $data->Password;
+    $_SESSION['Member_Name'] = $data->Name;
+    $_SESSION['Member_Email'] = $data->Email;
 
-    $_SESSION["Member_ID"] = getMemberID($_SESSION['Member_User'], $_SESSION['Member_Pass']);
     if($_SESSION["Member_ID"] != null){
-        getAllDetails();
-        echo "loggedin";
+        editUserDetails($_SESSION['Member_Name'], $_SESSION['Member_Email'], $_SESSION['Member_User'], $_SESSION['Member_Pass'], $_SESSION['Member_ID']);
     } else {
-        echo "nf";
+
     }
 }

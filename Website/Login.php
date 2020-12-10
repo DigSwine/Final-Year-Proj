@@ -50,9 +50,9 @@ include_once "../API/Login.php";
                     console.log(status);
                     console.log(text);
                     if (text != "loggedin") {
-                        alert("Username or password was incorrect, then try again");
+                        alert("Username or password was incorrect, please try again");
                     } else {
-                        window.open('Profile.php', '_self');
+                        window.open("Profile.php", "_self");
                     }
                 }
             });
@@ -60,7 +60,6 @@ include_once "../API/Login.php";
 
         //New User form
         $("#newuserform").submit(function (e) {
-            e.preventDefault(); // avoid to execute the actual submit of the form
             var name = $('#Name').val()
             var email = $('#Email').val()
             var user = $('#newUser').val()
@@ -94,7 +93,7 @@ include_once "../API/Login.php";
                     if (text != "sentdata") {
                         alert("Username is in use, please try again");
                     } else {
-                        
+                        window.open("Login.php", "_self");
                     }
                 }
             });
@@ -110,7 +109,7 @@ include_once "../API/Login.php";
 <div id="login" name="login" style="padding-left: 20px;">
     <div class="w3-content w3-text-grey" id="contact">
         <p>Login Details</p>
-        <form id="loginform" method="post">
+        <form id="loginform">
             <p><input style="width: 100%" class="w3-padding-16" type="text" placeholder="Username" required id="user" name="user"></p>
             <p><input class="w3-input w3-padding-16" type="password" placeholder="Password" required id="pass" name="pass"></p>
             <p><input  type="submit" style="padding-top: 10px; padding-bottom: 10px; width: 100%" id="btn_log" value="Login"></p>
