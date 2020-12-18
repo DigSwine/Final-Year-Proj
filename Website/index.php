@@ -16,8 +16,14 @@ include_once "Addons/Header.php";
                     <p>Virus is a game which </p>
 
                 <h3>The Aim of the website</h3>
-                    <p>To help the user understand how to make virus's and how fast they can spread by,
-                    allowing the user to make a virus and then release it into a simulation</p>
+                    <p>The project aim’s to be used by computer security students at the University of Plymouth,
+                        the main aim of the project is to offer support for students who have difficulty learning
+                        how to make virus’s by including a builder and a testing section – this will be made to
+                        appear like a game to make the tool more inviting. As the virus was inspired by a game
+                        (Plague Inc.) the name I have chosen is “Virus Inc.”. The project will be made on either
+                        a C# application hosted by Visual Studio or a Web Application. The Reason behind this project
+                        is to have a friendly tool to help students who are interested in virus’s and virus protection.
+                    </p>
             </div>
         </div>
     </body>

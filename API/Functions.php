@@ -44,12 +44,6 @@ function getMemberName($ID){
     $resultSet = $statement->fetchAll(PDO::FETCH_ASSOC);
     return stringit($resultSet);
 }
-function getMemberUser($ID){
-    $statement = getConnection()->prepare("SELECT Member_Username FROM members WHERE Member_ID = '" . $ID . "'");
-    $statement->execute();
-    $resultSet = $statement->fetchAll(PDO::FETCH_ASSOC);
-    return stringit($resultSet);
-}
 function getMemberPass($ID){
     $statement = getConnection()->prepare("SELECT Member_Pass FROM members WHERE Member_ID = '" . $ID . "'");
     $statement->execute();
@@ -61,6 +55,12 @@ function compareUsers($user){
     $statement->execute();
     $resultSet = $statement->fetchAll(PDO::FETCH_ASSOC);
     return stringit($resultSet);
+}
+function getlocationcomps($loc){
+        $statement = getConnection()->prepare("SELECT Location_CompDensity FROM locations WHERE Location_Name = '" . $loc . "'");
+        $statement->execute();
+        $resultSet = $statement->fetchAll(PDO::FETCH_ASSOC);
+        return stringit($resultSet);
 }
 
 //senders

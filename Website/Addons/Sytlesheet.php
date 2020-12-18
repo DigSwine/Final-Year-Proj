@@ -4,11 +4,11 @@
 <style>
     /* Allow 2 objects to sit next to each other */
     .views {
+        margin-left: 190px;
         max-width: 100%;
         float: left;
         width: 50%;
     }
-
     body
     {
         background-color: #000000;
@@ -17,15 +17,22 @@
     h1
     {
         font-family: "Montserrat", sans-serif
-    }.w3-row-padding img {margin-bottom: 12px}
-
+    }.w3-row-padding img {margin-bottom: 10px}
      h2, h3
      {
          font-size: 18;
          font-family: "Montserrat";
          color: papayawhip;
      }
-    /* Navigation bar */
+     .gamedisplay
+     {
+         width: 200px;
+         height: 30px;
+         text-align: center;
+     }
+
+
+     /* Navigation bar */
     .w3-sidebar {max-width: 10%; background: #222;}
 
     /* Add a left margin to the "page content" that matches the width of the sidebar */
