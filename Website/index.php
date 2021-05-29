@@ -20,10 +20,17 @@ include_once "Addons/Header.php";
                         the main aim of the project is to offer support for students who have difficulty learning
                         how to make virus’s by including a builder and a testing section – this will be made to
                         appear like a game to make the tool more inviting. As the virus was inspired by a game
-                        (Plague Inc.) the name I have chosen is “Virus Inc.”. The project will be made on either
+                        (Plague Inc.) the name I have chosen is “Hacker Adversary”. The project will be made on either
                         a C# application hosted by Visual Studio or a Web Application. The Reason behind this project
                         is to have a friendly tool to help students who are interested in virus’s and virus protection.
                     </p>
+                <h3>Instructions</h3>
+                    <p>Create a virus on the virus and select Confirm once the virus had been created, 
+                        the go to the game page and select what continent’s you want to start the virus in, 
+                        then watch as the world’s networks starts to slowly become infected.
+                    </p>
+                <h3>Rules</h3>
+                    <p>Hack the world to successfully infect each computer unit that had been sold in each continent.<p>
             </div>
         </div>
     </body>

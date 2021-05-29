@@ -185,7 +185,7 @@ include_once "Addons/Footer.php";
 		}
             } else {
                 //average email sent by an office PC is 40 emails per day
-                var todo = 400;
+                var todo = 40;
                 for (var y = 0; y < todo; y++) {
                     //produce random security values - 1 low security, 2 medium, 3 high
                     var randomsec = Math.floor(Math.random() * 3) + 1;
