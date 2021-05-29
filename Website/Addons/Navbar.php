@@ -4,7 +4,7 @@
     $loggedin = $_SESSION["loggedin"];
         if($loggedin == "false"){
             echo "<a href='index.php' class='w3-bar-item w3-button w3-padding-large w3-hover-black'>
-                <h2>About</h2>
+                <h2>ABOUT</h2>
             </a>
             <a href='Login.php' class='w3-bar-item w3-button w3-padding-large w3-hover-black'>
                 <h2>LOGIN</h2>
@@ -14,7 +14,7 @@
                 <h2>LOGOUT</h2>
             </a>
             <a href='Profile.php' class='w3-bar-item w3-button w3-padding-large w3-hover-black'>
-                <h2>ABOUT</h2>
+                <h2>PROFILE</h2>
             </a>
             <a href='Virus.php' class='w3-bar-item w3-button w3-padding-large w3-hover-black'>
                 <h2>VIRUS</h2>

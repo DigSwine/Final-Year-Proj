@@ -62,17 +62,34 @@ function getlocationcomps($loc){
         $resultSet = $statement->fetchAll(PDO::FETCH_ASSOC);
         return stringit($resultSet);
 }
+function checkloc($loc){
+    $statement = getConnection()->prepare("SELECT Location_Name FROM locations WHERE Location_Name = '" . $loc . "'");
+    $statement->execute();
+    $resultSet = $statement->fetchAll(PDO::FETCH_ASSOC);
+    return stringit($resultSet);
+}
+function getLocationSecur($loc)
+{
+    $statement = getConnection()->prepare("SELECT Location_VirusProtection FROM locations WHERE Location_Name = '" . $loc . "'");
+    $statement->execute();
+    $resultSet = $statement->fetchAll(PDO::FETCH_ASSOC);
+    return stringit($resultSet);
+}
 
 //senders
-function addNewUser($name, $email, $user, $pass){
-    $statement = getConnection()->prepare("INSERT INTO `members` (`Member_ID`, `Member_Name`, `Member_Email`, `Member_Username`, `Member_Pass`) VALUES (NULL, '" . $name . "', '" . $email . "', '" . $user . "', '" . $pass . "');");
-    $statement->execute();
-}
-function editUserDetails($name, $email, $user, $pass, $id){
-    $statement = getConnection()->prepare("UPDATE `members` SET `Member_Name` = '" . $name . "', `Member_Email` = '" . $email . "', `Member_Username` = '". $user . "',`Member_Pass` = '" . $pass . "' WHERE 'Member_ID' = '". $id . "';");
-    $statement->execute();
-}
+    function addNewUser($name, $email, $user, $pass)
+    {
+        $statement = getConnection()->prepare("INSERT INTO `members` (`Member_ID`, `Member_Name`, `Member_Email`, `Member_Username`, `Member_Pass`) VALUES (NULL, '" . $name . "', '" . $email . "', '" . $user . "', '" . $pass . "');");
+        $statement->execute();
+    }
+
+    function editUserDetails($name, $email, $user, $pass, $id)
+    {
+        $statement = getConnection()->prepare("UPDATE `members` SET `Member_Name` = '" . $name . "', `Member_Email` = '" . $email . "', `Member_Username` = '" . $user . "',`Member_Pass` = '" . $pass . "' WHERE 'Member_ID' = '" . $id . "';");
+        $statement->execute();
+    }
 //useful
+
 function stringit($in)
 {
     $send = "";
