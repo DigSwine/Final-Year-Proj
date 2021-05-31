@@ -22,14 +22,18 @@
      {
          font-size: 18;
          font-family: "Montserrat";
-         color: papayawhip;
+         color: LemonChiffon;
      }
      .gamedisplay
      {
          width: 200px;
          height: 30px;
          text-align: center;
+         background: white;
      }
+     ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: black;
+    }
 
 
      /* Navigation bar */

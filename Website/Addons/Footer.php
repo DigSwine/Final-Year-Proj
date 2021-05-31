@@ -1,3 +1,3 @@
 <footer class="w3-content w3-text-grey">
-    <p>Copyright Morgan Wilson-Slider</p>
+    <p style="color: #4c4c4c">Copyright Morgan Wilson-Slider</p>
 </footer>

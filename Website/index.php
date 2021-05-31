@@ -9,12 +9,11 @@ include_once "Addons/Header.php";
 <!DOCTYPE html>
 <html>
     <body>
-
         <div style="padding-left: 20px">
             <div class="w3-padding-16 w3-content w3-text-grey" id="contact">
-                <h3>About Virus inc.</h3>
-                    <p>Virus is a game which </p>
-
+                <h3>About Hacker Adversary</h3>
+                    <p>This game aim's to help students at the University of Plymouth to learn key terms and the components that build a virus, as well as some of the best types of virus’s that 
+                    are used to cause harm to a network.</p>
                 <h3>The Aim of the website</h3>
                     <p>The project aim’s to be used by computer security students at the University of Plymouth,
                         the main aim of the project is to offer support for students who have difficulty learning
@@ -25,7 +24,7 @@ include_once "Addons/Header.php";
                         is to have a friendly tool to help students who are interested in virus’s and virus protection.
                     </p>
                 <h3>Instructions</h3>
-                    <p>Create a virus on the virus and select Confirm once the virus had been created, 
+                    <p>Create a virus on the virus page and select Confirm once the virus had been created, 
                         the go to the game page and select what continent’s you want to start the virus in, 
                         then watch as the world’s networks starts to slowly become infected.
                     </p>
